@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    background-color: #F3E5D8;
+}
+
+body {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 50px;
+    border-radius: 30px;
+    background-color: #FEF8FC;
+
+    @media (max-width: 768px) {
+        margin: 0;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .recipe {
+        margin-bottom: 50px;
+
+        .recipe-img {
+            img {
+                width: 100%;
+                border-radius: 20px;
+                object-fit: cover;
+
+                @media (max-width: 768px) {
+                    border-radius: 0;
+                }
+            }
+        }
+
+        .recipe-body {
+
+            @media (max-width: 768px) {
+                padding: 0 25px;
+            }
+
+            h1 {
+                font-size: 42px;
+                margin: 30px 0;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            .prep-time {
+                padding: 30px;
+                background-color: hsl(330, 100%, 98%);
+                border-radius: 20px;
+
+                h3 {
+                    color: hsl(332, 51%, 32%);
+                    font-size: 22px;
+                    margin-bottom: 20px;
+                }
+
+                ul {
+                    li {
+                        padding: 5px 10px;
+                        &::marker {
+                            color: hsl(332, 51%, 32%);
+                        }
+                    }
+                }
+            }
+
+            .section-box {
+                margin-top: 40px;
+                padding-bottom: 30px;
+                border-bottom: 1px solid hsl(30, 18%, 87%);
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
+
+                h2 {
+                    font-size: 32px;
+                    margin-bottom: 20px;
+                    color: hsl(14, 45%, 36%);
+                }
+
+                li {
+                    margin-bottom: 10px;
+
+                    &::marker {
+                        color: hsl(14, 45%, 36%);
+                    }
+
+                    p {
+                        margin-left: 10px;
+
+                        strong {
+                            color: hsl(14, 45%, 36%);
+                        }
+                    }
+                }
+
+                > p {
+                    margin: 10px 0;
+                }
+
+                .nutrition {
+                    > div {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        padding: 12px 0 10px 12px;
+                    
+                        &:not(:last-child) {
+                            border-bottom: 1px solid hsl(30, 18%, 87%);
+                        }
+
+                        .title {
+                            color: hsl(30, 10%, 34%);
+                        }
+
+                        .info {
+                            color: hsl(14, 45%, 36%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
